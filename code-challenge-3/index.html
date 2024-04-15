@@ -1,0 +1,83 @@
+<html>
+  <script>
+    const movieData = {
+      "id": "1",
+      "title": "KIN (LEGEND  PETER)",
+      "runtime": "146",
+      "showtime": "6:30 PM",
+      "tickets_sold": 0, // Initial tickets sold
+      "description": "Meet a young boy named Peter who is just a typical average Kenyan boy in the streets of Nairobi who is just on his his business, literally does he know he is a future revolutionary who stopped a great war in the future that was supposed to end the world by a mad scientist until he finds himself running for his life from soldiers who came from the year 2099 and won't stop at nothing until he's dead.",
+      "poster": "/assets/MV5BZDczYzNhMDMtNmQ2Ni00ZjcwLWI1MDQtMWI1YWVkNjkzN2NhXkEyXkFqcGdeQXVyNDMzMzI5MjM@._V1_ (1).jpg",
+      "capacity": 70 // Total capacity
+    };
+  </script>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Code Challenge</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"
+    />
+    <link rel="stylesheet" href="assets/index.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="heading">
+      <div class="item">
+        <h2 class="ui header">
+          <i class="orange ticket icon"></i>
+          <div class="content">FLATDANGO</div>
+          <div class="sub header" id="subtitle">BUY MOVIE TICKETS</div>
+        </h2>
+      </div>
+    </div>
+
+    <div class="ui centered grid">
+      <div class="four wide column">
+        <div class="list-container">
+          <!-- side menu -->
+          <ul class="ui divided list" id="films">
+            <li class="film item" onclick="fetch_info(0)"> legend of peter.</li>
+         
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- poster -->
+      <div class="four wide column">
+        <img
+          id="poster"
+          src="assets/MV5BZDczYzNhMDMtNmQ2Ni00ZjcwLWI1MDQtMWI1YWVkNjkzN2NhXkEyXkFqcGdeQXVyNDMzMzI5MjM@._V1_ (1).jpg"
+          alt="[MOVIE TITLE]"
+        />
+      </div>
+      
+
+      <!-- showing info -->
+      <div class="four wide column">
+        <div class="ui cards" id="showing">
+          <div class="card">
+            <div id="title" class="title">KIN </div>
+            <div id="runtime" class="meta">146 minutes</div>
+            <div class="content">
+              <div class="description">
+                <div id="film-info">Meet a young boy named peter who is just a typical avarege kenyan boy in the streets of Nairobi who is just on his his business, literally does he know he is a future revolutionary who stopped a great war in the future that was supposed to end the world by a mad scientientist <br> until he finds himself running for his life from soldier who came from the year 2099 and wont stop at nothing until his dead</div>
+                <span id="showtime" class="ui label">6:30 PM</span>
+                <span id="ticket-num">34</span> remaining tickets
+              </div>
+            </div>
+            <div class="extra content">
+              <button id="buy-ticket" class="ui orange button">
+                Buy Ticket
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
